@@ -1,0 +1,2 @@
+vendor/bin/php-cs-fixer fix  --rules='@PSR2' --dry-run --diff --diff-format udiff file
+vendor/bin/php-cs-fixer fix  --rules='@PSR2' file

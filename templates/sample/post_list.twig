@@ -1,0 +1,20 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+<h2>一覧</h2>
+<table border="1">
+{% for key, variable in data %}
+<tr>
+  <td>{{ variable.sample_id }}
+  <td>{{ variable.sample_name }}
+  <td>{{ variable.sample_string_lock }}
+  <td>{{ variable.sample_num }}
+  <td>{{ variable.created_at }}
+  <td><a href="/sample/detail/{{ variable.sample_id|url_encode }}">詳細</a>
+{% endfor %}
+</table>
+
+{% endblock %}
+

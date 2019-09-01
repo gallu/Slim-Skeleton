@@ -1,0 +1,33 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+<h2>入力各種</h2>
+
+<h3>GET</h3>
+<form action="/sample/request/get" method="GET">
+テキスト:<input name="hoge"><br>
+チェックボックス:<input type="checkbox" name="foo[]" value="1">1, <input type="checkbox" name="foo[]" value="2">2, <input type="checkbox" name="foo[]" value="3">3<br>
+<br>
+<button>送信</button>
+</form>
+
+<h3>POST</h3>
+<form action="/sample/request/post" method="POST">
+テキスト:<input name="hoge"><br>
+チェックボックス:<input type="checkbox" name="foo[]" value="1">1, <input type="checkbox" name="foo[]" value="2">2, <input type="checkbox" name="foo[]" value="3">3<br>
+<br>
+<button>送信</button>
+</form>
+
+<h3>PUT</h3>
+<form action="/sample/request/put" method="POST">
+<input type="hidden" name="_METHOD" value="PUT">
+テキスト:<input name="hoge"><br>
+チェックボックス:<input type="checkbox" name="foo[]" value="1">1, <input type="checkbox" name="foo[]" value="2">2, <input type="checkbox" name="foo[]" value="3">3<br>
+<br>
+<button>送信</button>
+</form>
+
+{% endblock %}

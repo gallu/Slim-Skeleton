@@ -1,0 +1,4 @@
+chmod 777 logs/
+cd src
+ln -s by_environment_settings_dummy.php by_environment_settings.php
+

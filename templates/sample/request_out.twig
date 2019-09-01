@@ -1,0 +1,13 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+<h2>入力結果</h2>
+
+メソッド名: {{ method }}<br>
+入力：{{ text }}<br>
+checkbox：{% for key, val in foo %}{{ val }},{% endfor %}
+
+
+{% endblock %}

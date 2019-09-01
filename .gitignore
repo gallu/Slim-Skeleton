@@ -1,0 +1,10 @@
+# 
+/vendor
+/logs
+*.swp
+.php_cs.cache
+.phpunit.result.cache
+
+
+# 環境別設定ファイル
+/src/by_environment_settings.php

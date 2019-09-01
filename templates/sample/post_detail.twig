@@ -1,0 +1,15 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+sample_id: {{ datum.sample_id }}<br>
+sample_name:{{ datum.sample_name }}<br>
+sample_string_lock:{{ datum.sample_string_lock }}<br>
+sample_num:{{ datum.sample_num }}<br>
+sample_detail:{{ datum.sample_detail }}<br>
+created_at:{{ datum.created_at }}<br>
+updated_at:{{ datum.updated_at }}<br>
+
+{% endblock %}
+

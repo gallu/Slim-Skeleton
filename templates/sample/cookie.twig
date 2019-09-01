@@ -1,0 +1,12 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+<h2>Cookie<h2>
+
+rand: {{ rand_set }}/{{ rand }}<br>
+rand_tmp: {{ rand_tmp_set }}/{{ rand_tmp }}<br>
+
+{% endblock %}
+

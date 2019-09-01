@@ -1,0 +1,27 @@
+{# ベースとなるテンプレートを継承する #}
+{% extends "sample/layout.twig" %}
+
+{# body部分 #}
+{% block body %}
+{% if error %}
+<div>
+{% for key, variable in error %}
+  {%if key == 'sample_name' %}サンプル名でエラーです<br>{% endif %}
+  {%if key == 'sample_string_lock' %}サンプル文字列でエラーです<br>{% endif %}
+  {%if key == 'sample_num' %}サンプル量でエラーです<br>{% endif %}
+{% endfor %}
+</div>
+<br><br>
+{% endif %}
+
+<form action="/sample/post" method="post">
+サンプル名:<input name="sample_name" value="{{ datum.sample_name }}"><br>
+サンプル文字列(UPDATE不可):<input name="sample_string_lock" value="{{ datum.sample_string_lock }}"><br>
+サンプル量:<input name="sample_num" value="{{ datum.sample_num }}"><br>
+サンプル詳細:<input name="sample_detail" value="{{ datum.sample_detail }}"><br>
+<br>
+<button>新規登録</button>
+</form>
+
+{% endblock %}
+

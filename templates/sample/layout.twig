@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Slim Skeleton sample: {% block title %}{% endblock %}</title>
+</head>
+<body>
+<h1>さんぷる</h1>
+<a href="/sample">表示</a><br>
+<a href="/sample/location">location(内部)</a><br>
+<a href="/sample/location/google">location(外部)</a><br>
+<a href="/sample/request">データの受取</a><br>
+<a href="/sample/session">セッション</a><br>
+<a href="/sample/cookie">Cookie</a><br>
+<h2>DB付き</h2>
+<a href="/sample/post">新規データ</a><br>
+<a href="/sample/list">一覧表示</a><br>
+
+<!--
+<h2>middleware付き</h2>
+<a href="/sample/">表示</a><br>
+-->
+<hr>
+{# 本文を入れるエリア #}
+{% block body %}{% endblock %}
+
+{# JavaScriptエリア #}
+{% block javascript %}{% endblock %}
+</body>
+</html>
+
