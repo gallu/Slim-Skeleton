@@ -1,6 +1,5 @@
 # 
 /vendor
-/logs
 *.swp
 .php_cs.cache
 .phpunit.result.cache
