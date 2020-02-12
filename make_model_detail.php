@@ -10,5 +10,5 @@ require(BASEPATH . '/vendor/autoload.php');
 require(BASEPATH . '/src/init.php');
 
 // クラスを直接callして処理はそちらに任せる
-\SlimLittleTools\Libs\MackModelDetail::exec($argv);
+\SlimLittleTools\Libs\MakeModelDetail::exec($argv);
 

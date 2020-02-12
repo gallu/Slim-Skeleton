@@ -7,8 +7,7 @@ namespace App\Model\Detail;
 
 // sample_table
 // サンプル用テーブル
-trait SampleTableDetail
-{
+trait SampleTableDetail {
     // pk
     protected $pk = 'sample_id';
     // テーブル名

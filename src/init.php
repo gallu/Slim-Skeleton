@@ -22,8 +22,10 @@ require(BASEPATH . '/src/dependencies.php');
 // XXX DBとConfigだけは「どこからでも」触りたいので
 \SlimLittleTools\Libs\DB::setContainer($app->getContainer());
 \SlimLittleTools\Libs\Config::setContainer($app->getContainer());
+\SlimLittleTools\Libs\Container::setContainer($app->getContainer());
 
 // class のエイリアス
 class_alias('\\SlimLittleTools\\Libs\\DB', 'DB');
 class_alias('\\SlimLittleTools\\Libs\\Config', 'Config');
+class_alias('\\SlimLittleTools\\Libs\\Container', 'Container');
 
