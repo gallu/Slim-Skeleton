@@ -42,6 +42,9 @@ $app->group('/sample', function() use ($app) {
     $app->get('/edit/{id}', Sample::class . ':edit')->setName('post_edit');
     $app->post('/edit/{id}', Sample::class . ':editDo');
 
+    // Model/Detail の確認
+    $app->get('/model/detail', Sample::class . ':model_detail')->setName('model_detail');
+
     // session
     $app->get('/session', Sample::class . ':session');
     // Cookie

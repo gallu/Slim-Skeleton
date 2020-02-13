@@ -194,11 +194,38 @@ class Sample extends ControllerBase
         return $response->write($this->render('sample/post_detail.twig', $context));
     }
 
-
     // middleware付き(middlewareは空でよいかなぁ...)
     public function middle(ServerRequestInterface $request, ResponseInterface $response, $routeArguments)
     {
         // 出力
         return $response->write($this->render('sample/index.twig', []));
     }
+
+    // Model/Detail の確認
+    public function model_detail(ServerRequestInterface $request, ResponseInterface $response, $routeArguments)
+    {
+        // 確認用なのでテンプレート無しで
+        echo "<pre>\n";
+        echo "getAllColmunsWithComment\n";
+        var_dump(SampleTable::getAllColmunsWithComment());        
+
+        echo "\ngetAllColmunsWithComment('(')\n";
+        var_dump(SampleTable::getAllColmunsWithComment('('));        
+
+        echo "\ngetAllColmuns\n";
+        var_dump(SampleTable::getAllColmuns());        
+
+        echo "\ngetAllColmunsWithCommentWithoutPk\n";
+        var_dump(SampleTable::getAllColmunsWithCommentWithoutPk());        
+
+        echo "\ngetAllColmunsWithoutPk\n";
+        var_dump(SampleTable::getAllColmunsWithoutPk());        
+
+        echo "\nisColumnTypeDate\n";
+        foreach(SampleTable::getAllColmuns() as $col) {
+            echo "{$col} is ", intval(SampleTable::isColumnTypeDate($col)), "\n";
+        }
+
+    }
+
 }
